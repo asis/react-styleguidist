@@ -85,7 +85,9 @@ export default class Preview extends Component {
 				</Wrapper>
 			);
 
-			ReactDOM.render(wrappedComponent, this.mountNode);
+			setTimeout(() => {
+				ReactDOM.render(wrappedComponent, this.mountNode);
+			});
 		}
 		catch (err) {
 			ReactDOM.unmountComponentAtNode(this.mountNode);
