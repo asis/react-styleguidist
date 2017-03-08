@@ -608,7 +608,7 @@ export default function markdownToJSX(markdown, { overrides = {} } = {}) {
 
 	// discard the root <div> node if there is only one valid initial child
 	// generally this is a paragraph
-	if (jsx.props.children && jsx.props.children.length === 1) {
+	if (jsx.props.children.length === 1) {
 		jsx = jsx.props.children[0];
 	}
 
